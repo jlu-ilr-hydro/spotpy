@@ -204,7 +204,7 @@ class fast(_algorithm):
         """
         self.set_repetiton(repetitions)
         print(
-            "Starting the FAST algotrithm with " + str(repetitions) + " repetitions..."
+            "Starting the FAST algorithm with " + str(repetitions) + " repetitions..."
         )
         print("Creating FAST Matrix")
         # Get the names of the parameters to analyse

@@ -6,6 +6,7 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 
 This example implements the external hydrological model HYMOD into SPOTPY.
 """
+
 import numpy as np
 
 try:
@@ -16,10 +17,7 @@ except ImportError:
     sys.path.append(".")
     import spotpy
 
-import multiprocessing as mp
 import os
-
-# from shutil import rmtree
 import sys
 from distutils.dir_util import copy_tree, remove_tree
 

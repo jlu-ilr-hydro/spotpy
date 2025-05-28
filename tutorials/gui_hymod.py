@@ -4,7 +4,6 @@ Shows the usage of the matplotlib GUI
 Needs at least Python 3.5
 """
 
-
 import spotpy
 from spotpy.examples.spot_setup_hymod_python import spot_setup
 from spotpy.gui.mpl import GUI

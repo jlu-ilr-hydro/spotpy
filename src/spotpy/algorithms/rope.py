@@ -23,7 +23,6 @@ class rope(_algorithm):
     """
 
     def __init__(self, *args, **kwargs):
-
         """
         Input
         ----------
@@ -54,7 +53,7 @@ class rope(_algorithm):
             * seq: Sequentiel sampling (default): Normal iterations on one core
             of your cpu.
             * mpc: Multi processing: Iterations on all available cores on your cpu
-            (recommended for windows os).
+            (recommended for Windows os).
             * mpi: Message Passing Interface: Parallel computing on cluster pcs
             (recommended for unix os).
 
@@ -107,7 +106,7 @@ class rope(_algorithm):
         # wenn mehr parameter produziert werden sollen als reingehen, rechnet er sich tot (ngen>n)
         # Subsets < 5 führt manchmal zu Absturz
         print(
-            "Starting the ROPE algotrithm with " + str(repetitions) + " repetitions..."
+            "Starting the ROPE algorithm with " + str(repetitions) + " repetitions..."
         )
         self.set_repetiton(repetitions)
 

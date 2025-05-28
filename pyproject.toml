@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 name = "spotpy"
 description = "A Statistical Parameter Optimization Tool."
 authors = [
@@ -55,8 +55,10 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering",
     "Topic :: Scientific/Engineering :: Hydrology",
     "Topic :: Scientific/Engineering :: Mathematics",
@@ -106,7 +108,11 @@ multi_line_output = 3
 [tool.black]
 exclude = "_version.py"
 target-version = [
+    "py39",
+    "py310",
+    "py311",
 	"py312",
+    "py313",
 ]
 
 [tool.coverage]

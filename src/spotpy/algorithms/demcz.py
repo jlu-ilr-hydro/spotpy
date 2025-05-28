@@ -91,9 +91,9 @@ class demcz(_algorithm):
             * False: Simulationt results will not be saved
         """
         kwargs["optimization_direction"] = "maximize"
-        kwargs[
-            "algorithm_name"
-        ] = "Differential Evolution Markov Chain (DE-MC) algorithm"
+        kwargs["algorithm_name"] = (
+            "Differential Evolution Markov Chain (DE-MC) algorithm"
+        )
         super(demcz, self).__init__(*args, **kwargs)
 
     def check_par_validity(self, par):
@@ -144,7 +144,7 @@ class demcz(_algorithm):
 
         self.set_repetiton(repetitions)
         print(
-            "Starting the DEMCz algotrithm with " + str(repetitions) + " repetitions..."
+            "Starting the DEMCz algorithm with " + str(repetitions) + " repetitions..."
         )
 
         self.min_bound, self.max_bound = (

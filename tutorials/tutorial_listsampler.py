@@ -4,7 +4,7 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 
 :author: Tobias Houska
 
-This example implements the Rosenbrock function into SPOT.  
+This example implements the Rosenbrock function into SPOT.
 """
 
 import spotpy
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     results = spotpy.analyser.load_csv_results("FAST_hymodlist")
 
     # 2.5 Please mind that these results contains the same data as we have used
-    # the same spot_setup. However we could have also used another spot_setup,
+    # the same spot_setup. However, we could have also used another spot_setup,
     # which takes the same parameters.
     #############################################################
 

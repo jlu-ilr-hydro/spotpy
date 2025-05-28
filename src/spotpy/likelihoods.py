@@ -504,8 +504,8 @@ def generalizedLikelihoodFunction(data, comparedata, measerror=None, params=None
         missingparams = []
         randomparset, parameternames = params
         parameternames = np.array(parameternames)
-        #randomparset = np.array(randomparset)
-        randomparset = [np.array(par) for par in randomparset] 
+        # randomparset = np.array(randomparset)
+        randomparset = [np.array(par) for par in randomparset]
         for nm in paramDependencies:
             if nm not in parameternames:
                 missingparams.append(nm)
@@ -568,9 +568,7 @@ def generalizedLikelihoodFunction(data, comparedata, measerror=None, params=None
         )
         M_2 = 1
         sigma_xi = np.sqrt(
-            np.abs(
-                float((M_2 - M_1**2) * (xi**2 + xi ** (-2)) + 2 * M_1**2 - M_2)
-            )
+            np.abs(float((M_2 - M_1**2) * (xi**2 + xi ** (-2)) + 2 * M_1**2 - M_2))
         )
         cBeta = (math.gamma(3 * (1 + beta) / 2) / math.gamma((1 + beta) / 2)) ** (
             1 / (1 + beta)
@@ -699,9 +697,7 @@ def SkewedStudentLikelihoodHomoscedastic(data, comparedata, measerror=None):
 
     # TODO Maximizing with negative to zero?
     # Original: -np.prod(1 / (np.sqrt(2 * np.pi) * measerror) * np.exp(-1 * (res ** 2) / (2)))
-    return -np.sum(
-        (1 / (np.sqrt(2 * np.pi) * measerror) * np.exp(-1 * (res**2) / (2)))
-    )
+    return -np.sum((1 / (np.sqrt(2 * np.pi) * measerror) * np.exp(-1 * (res**2) / (2))))
 
 
 def SkewedStudentLikelihoodHeteroscedastic(
@@ -957,9 +953,7 @@ def SkewedStudentLikelihoodHeteroscedasticAdvancedARModel(
             return np.NAN
 
     N = data.__len__()
-    eta_all = (res[1:] - phi * res[:-1] + phi / (N) * np.sum(res)) * np.sqrt(
-        1 - phi**2
-    )
+    eta_all = (res[1:] - phi * res[:-1] + phi / (N) * np.sum(res)) * np.sqrt(1 - phi**2)
 
     c_1 = (
         (k**2 - 1 / (k**2))

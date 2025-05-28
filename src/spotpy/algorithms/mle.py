@@ -64,9 +64,7 @@ class mle(_algorithm):
 
     def sample(self, repetitions):
         self.set_repetiton(repetitions)
-        print(
-            "Starting the MLE algotrithm with " + str(repetitions) + " repetitions..."
-        )
+        print(f"Starting the MLE algorithm with {repetitions} repetitions...")
         # Define stepsize of MLE
         stepsizes = self.parameter()["step"]  # array of stepsizes
         accepted = 0.0

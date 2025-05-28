@@ -6,8 +6,8 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 
 :author: Tobias Houska and Benjamin Manns
 
-:paper: Houska, T., Kraft, P., Chamorro-Chavez, A. and Breuer, L.: 
-SPOTting Model Parameters Using a Ready-Made Python Package, 
+:paper: Houska, T., Kraft, P., Chamorro-Chavez, A. and Breuer, L.:
+SPOTting Model Parameters Using a Ready-Made Python Package,
 PLoS ONE, 10(12), e0145180, doi:10.1371/journal.pone.0145180, 2015.
 """
 

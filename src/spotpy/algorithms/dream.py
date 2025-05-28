@@ -54,9 +54,9 @@ class dream(_algorithm):
         """
 
         kwargs["optimization_direction"] = "maximize"
-        kwargs[
-            "algorithm_name"
-        ] = "DiffeRential Evolution Adaptive Metropolis (DREAM) algorithm"
+        kwargs["algorithm_name"] = (
+            "DiffeRential Evolution Adaptive Metropolis (DREAM) algorithm"
+        )
         super(dream, self).__init__(*args, **kwargs)
 
     def check_par_validity_bound(self, par):
@@ -270,7 +270,7 @@ class dream(_algorithm):
     ):
         self.set_repetiton(repetitions)
         print(
-            "Starting the DREAM algotrithm with " + str(repetitions) + " repetitions..."
+            "Starting the DREAM algorithm with " + str(repetitions) + " repetitions..."
         )
         if nChains < 2 * delta + 1:
             print("Please use at least n=2*delta+1 chains!")

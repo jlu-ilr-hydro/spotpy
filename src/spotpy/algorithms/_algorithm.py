@@ -5,6 +5,7 @@ This file is part of Statistical Parameter Optimization Tool for Python(SPOTPY).
 
 This file holds the standards for every algorithm.
 """
+
 import random
 import threading
 import time
@@ -516,9 +517,9 @@ class _algorithm(object):
         can mix up the ordering of runs
         """
         id, params = id_params_tuple
-        self.all_params[
-            self.non_constant_positions
-        ] = params  # TODO: List parameters are not updated if not accepted for the algorithm, we may have to warn/error if list is given
+        self.all_params[self.non_constant_positions] = (
+            params  # TODO: List parameters are not updated if not accepted for the algorithm, we may have to warn/error if list is given
+        )
         all_params = self.all_params
 
         if self.sim_timeout:
@@ -528,7 +529,7 @@ class _algorithm(object):
                 q.put(self.setup.simulation(self.partype(*all_params)))
 
             # starting a queue, where in python2.7 this is a multiprocessing class and can cause errors because of
-            # incompability which the main thread. Therefore only for older Python version a workaround follows
+            # incompability which the main thread. Therefore, only for older Python version a workaround follows
             que = Queue()
 
             sim_thread = threading.Thread(target=model_layer, args=(que, all_params))

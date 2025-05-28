@@ -179,9 +179,9 @@ class NSGAII(_algorithm):
         """
         self._return_all_likes = True  # alloes multi-objective calibration
         kwargs["optimization_direction"] = "minimize"
-        kwargs[
-            "algorithm_name"
-        ] = "Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II"
+        kwargs["algorithm_name"] = (
+            "Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II"
+        )
         super(NSGAII, self).__init__(*args, **kwargs)
 
     def fastSort(self, x):
@@ -194,9 +194,9 @@ class NSGAII(_algorithm):
                 S[i, j] = self.dominates(x[i, :], x[j, :])
 
         nDom = np.sum(S, axis=0)  # the n solutions that dominates i
-        Np[
-            nDom == 0
-        ] = 1  # if i ==  0, i is non-dominated, set i rank to 1, i belongs to first non-dominated front
+        Np[nDom == 0] = (
+            1  # if i ==  0, i is non-dominated, set i rank to 1, i belongs to first non-dominated front
+        )
         k = 1
         # loop over pareto fronts
         while np.sum(Np == 0) > 0:

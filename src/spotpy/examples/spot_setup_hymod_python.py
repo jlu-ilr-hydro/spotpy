@@ -7,7 +7,6 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 This example implements the python version of hymod into SPOTPY.
 """
 
-
 import os
 
 from spotpy.examples.hymod_python.hymod import hymod

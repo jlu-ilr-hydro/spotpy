@@ -6,6 +6,7 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 
 This file shows how to make 3d surface plots.
 """
+
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.ticker import FormatStrFormatter, LinearLocator
@@ -27,7 +28,7 @@ X, Y = meshgrid(X, Y)
 # from spot_setup_griewank import spot_setup
 from spotpy.examples.spot_setup_ackley import spot_setup
 
-Z = np.zeros(X.shape)
+Z = zeros(X.shape)
 for i in range(X.shape[0]):
     for j in range(X.shape[1]):
         sim = spot_setup().simulation([X[i, j], Y[i, j]])

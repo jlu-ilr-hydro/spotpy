@@ -101,9 +101,9 @@ class padds(_algorithm):
 
         self._return_all_likes = True  # allows multi-objective calibration
         kwargs["optimization_direction"] = "minimize"
-        kwargs[
-            "algorithm_name"
-        ] = "Pareto Archived Dynamically Dimensioned Search (PADDS) algorithm"
+        kwargs["algorithm_name"] = (
+            "Pareto Archived Dynamically Dimensioned Search (PADDS) algorithm"
+        )
 
         super(padds, self).__init__(*args, **kwargs)
 
@@ -162,6 +162,7 @@ class padds(_algorithm):
             yield rep, self.calculate_next_s_test(
                 self.best_value.parameters, rep, self.generator_repetitions, self.r
             )
+
     def calculate_initial_parameterset(self, repetitions, initial_objs, initial_params):
         self.obj_func_current = np.array([0.0])
         self.parameter_current = np.array([0.0] * self.number_of_parameters)
@@ -170,23 +171,23 @@ class padds(_algorithm):
         )
         self.pareto_front = [
             np.zeros(self.number_of_parameters),
-            np.zeros(self.number_of_parameters)
+            np.zeros(self.number_of_parameters),
         ]
         print(self.pareto_front)
         self.pareto_front = np.array(self.pareto_front)
-    # def calculate_initial_parameterset(self, repetitions, initial_objs, initial_params):
-    #     self.obj_func_current = np.array([0.0])
-    #     self.parameter_current = np.array([0.0] * self.number_of_parameters)
-    #     self.parameter_range = (
-    #         self.best_value.parameters.maxbound - self.best_value.parameters.minbound
-    #     )
-    #     self.pareto_front = [
-    #     np.array([]),
-    #     np.zeros(self.number_of_parameters)
-    #     ]
-    #     # self.pareto_front = np.array(
-    #     #     [[np.array([]), np.array([0] * self.number_of_parameters)]]
-    #     # )
+        # def calculate_initial_parameterset(self, repetitions, initial_objs, initial_params):
+        #     self.obj_func_current = np.array([0.0])
+        #     self.parameter_current = np.array([0.0] * self.number_of_parameters)
+        #     self.parameter_range = (
+        #         self.best_value.parameters.maxbound - self.best_value.parameters.minbound
+        #     )
+        #     self.pareto_front = [
+        #     np.array([]),
+        #     np.zeros(self.number_of_parameters)
+        #     ]
+        #     # self.pareto_front = np.array(
+        #     #     [[np.array([]), np.array([0] * self.number_of_parameters)]]
+        #     # )
 
         # self.pareto_front = np.array([np.append([np.inf] * self.like_struct_len, [0] * self.number_of_parameters)])
 
@@ -248,7 +249,7 @@ class padds(_algorithm):
         # Spotpy will not need this values.
         debug_results = []
         print(
-            "Starting the PADDS algotrithm with " + str(repetitions) + " repetitions..."
+            "Starting the PADDS algorithm with " + str(repetitions) + " repetitions..."
         )
         print(
             "WARNING: THE PADDS algorithm as implemented in SPOTPY is in an beta stage and not ready for production use!"
@@ -438,9 +439,9 @@ class padds(_algorithm):
                 self.max_bound[dec_var - 1],
             )
 
-            new_x_curr[
-                dec_var - 1
-            ] = new_value  # change relevant decision variable value in s_test
+            new_x_curr[dec_var - 1] = (
+                new_value  # change relevant decision variable value in s_test
+            )
         return new_x_curr
 
 

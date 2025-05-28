@@ -6,6 +6,7 @@ This file is part of Statistical Parameter Optimization Tool for Python(SPOTPY).
 Tests the various possibilities to create and use parameters
 Focus especially the usage of parameters as class attributes
 """
+
 import inspect
 import sys
 import unittest

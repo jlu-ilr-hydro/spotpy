@@ -6,6 +6,7 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 
 This example implements the Rosenbrock function into SPOT.
 """
+
 import numpy as np
 
 import spotpy
@@ -52,5 +53,5 @@ if __name__ == "__main__":
     sampler = spotpy.algorithms.mc(spot_setup, dbformat="custom")
     sampler.sample(
         100
-    )  # Choose equal or less repetitions as you have parameters in your List
+    )  # Choose equal or fewer repetitions as you have parameters in your List
     spot_setup.database.close()  # Close the created txt file

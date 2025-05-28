@@ -16,17 +16,13 @@ A Statistical Parameter Optimization Tool for Python
 [license-image]: https://img.shields.io/badge/license-MIT-blue.png
 [license-link]: http://opensource.org/licenses/MIT
 
-
-
 Purpose
-=================
-
+=======
 
 https://github.com/user-attachments/assets/4df71cb2-dcf9-4a24-bb78-6e4e1c43356a
 
-
 SPOTPY is a Python framework that enables the use of Computational optimization techniques for calibration, uncertainty
-and sensitivity analysis techniques of almost every (environmental-) model. The package is puplished in the open source journal PLoS One:
+and sensitivity analysis techniques of almost every (environmental-) model. The package is published in the open source journal PLoS One:
 
 Houska, T., Kraft, P., Chamorro-Chavez, A. and Breuer, L.: SPOTting Model Parameters Using a Ready-Made Python Package, PLoS ONE,
 10(12), e0145180, doi:[10.1371/journal.pone.0145180](http://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0145180 "SPOTting Model Parameters Using a Ready-Made Python Package"), 2015
@@ -39,10 +35,8 @@ algorithms of almost any model, without the need of complex codes::
 	results = sampler.getdata()                          # Load the results
 	spotpy.analyser.plot_parametertrace(results)         # Show the results
 
-
-
 Features
-=================
+========
 
 Complex algorithms bring complex tasks to link them with a model.
 We want to make this task as easy as possible.
@@ -65,7 +59,7 @@ Some features you can use with the SPOTPY package are:
   * Artificial Bee Colony (`ABC`)
   * Fitness Scaled Chaotic Artificial Bee Colony (`FSCABC`)
   * Dynamically Dimensioned Search algorithm (`DDS`)
-  * Pareto Archived - Dynamicallly Dimensioned Search algorithm (`PA-DDS`)
+  * Pareto Archived - Dynamically Dimensioned Search algorithm (`PA-DDS`)
   * Fast and Elitist Multiobjective Genetic Algorithm (`NSGA-II`)
 
 * Wide range of objective functions (also known as loss function, fitness function or energy function) to validate the sampled results. Available functions are
@@ -84,7 +78,7 @@ Some features you can use with the SPOTPY package are:
   * Agreement Index (`AI`)
   * Covariance, Decomposed MSE (`dMSE`)
   * Kling-Gupta Efficiency (`KGE`)
-  * Non parametric Kling-Gupta Efficiency (`KGE_non_parametric`)
+  * Non-parametric Kling-Gupta Efficiency (`KGE_non_parametric`)
 
 * Wide range of hydrological signatures functions to validate the sampled results:
 
@@ -102,12 +96,12 @@ Some features you can use with the SPOTPY package are:
 
   * Uniform
   * Normal
-  * logNormal
-  * Chisquare
+  * log-normal
+  * Chi-Square
   * Exponential
   * Gamma
   * Wald
-  * Weilbull
+  * Weibull
 
 * Wide range to adapt algorithms to perform uncertainty-, sensitivity analysis or calibration
   of a model.
@@ -137,7 +131,7 @@ Some features you can use with the SPOTPY package are:
 
 
 Install
-=================
+=======
 
 Classical Python options exist to install SPOTPY:
 
@@ -157,7 +151,7 @@ From [Source](https://pypi.python.org/pypi/spotpy):
 
 
 Support
-=================
+=======
 
 * Documentation: https://spotpy.readthedocs.io/en/latest/
 
@@ -171,12 +165,12 @@ Support
 
 
 Getting started
-=================
+===============
 Have a look at https://github.com/thouska/spotpy/tree/master/spotpy/examples and https://spotpy.readthedocs.io/en/latest/getting_started/
 
 
 Contributing
-=================
+============
 Patches/enhancements/new algorithms and any other contributions to this package are very welcome!
 
 1. Fork it ( http://github.com/thouska/spotpy/fork )
@@ -188,5 +182,5 @@ Patches/enhancements/new algorithms and any other contributions to this package 
 7. Create new Pull Request
 
 Papers citing SPOTPY
-=====================
+====================
 See [Google Scholar](https://scholar.google.de/scholar?cites=17155001516727704728&as_sdt=2005&sciodt=0,5&hl=de) for a continuously updated list.

@@ -281,9 +281,7 @@ class dds(_algorithm):
             self.parameter()["minbound"],
             self.parameter()["maxbound"],
         )
-        print(
-            "Starting the DDS algotrithm with " + str(repetitions) + " repetitions..."
-        )
+        print(f"Starting the DDS algorithm with {repetitions} repetitions...")
 
         number_of_parameters = (
             self.status.parameters
@@ -389,12 +387,14 @@ class dds(_algorithm):
                 (
                     rep,
                     [
-                        self.np_random.randint(
-                            int(self.min_bound[j]), int(self.max_bound[j]) + 1
+                        (
+                            self.np_random.randint(
+                                int(self.min_bound[j]), int(self.max_bound[j]) + 1
+                            )
+                            if discrete_flag[j]
+                            else self.min_bound[j]
+                            + parameter_bound_range[j] * self.np_random.rand()
                         )
-                        if discrete_flag[j]
-                        else self.min_bound[j]
-                        + parameter_bound_range[j] * self.np_random.rand()
                         for j in range(number_of_parameters)
                     ],
                 )
@@ -471,8 +471,8 @@ class dds(_algorithm):
                 self.min_bound[dec_var],
                 self.max_bound[dec_var],
             )
-            new_x_curr[
-                dec_var
-            ] = new_value  # change relevant decision variable value in s_test
+            new_x_curr[dec_var] = (
+                new_value  # change relevant decision variable value in s_test
+            )
 
         return new_x_curr

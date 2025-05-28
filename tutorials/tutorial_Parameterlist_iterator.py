@@ -6,6 +6,7 @@ This file is part of Statistical Parameter Estimation Tool (SPOTPY).
 
 This example implements the Rosenbrock function into SPOT.
 """
+
 import numpy as np
 
 import spotpy
@@ -49,4 +50,4 @@ sampler = spotpy.algorithms.mc(
 )  # Parameter lists can be sampled with MC
 sampler.sample(
     10
-)  # Choose equaly or less repetitions as you have parameters in your List
+)  # Choose equaly or fewer repetitions as you have parameters in your List

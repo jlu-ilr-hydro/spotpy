@@ -47,10 +47,10 @@ class _ArgumentHelper(object):
         :return: name
         """
         # Check if args[0] is string like (and exists)
-        #if self.args and str(self.args[0]) == self.args[0]:
-        #if self.args and (str(self.args[0]) == self.args[0]):
+        # if self.args and str(self.args[0]) == self.args[0]:
+        # if self.args and (str(self.args[0]) == self.args[0]):
         if self.args and (isinstance(self.args[0], str)):
-        #if (self.args & isinstance(self.args[0], str)).all():
+            # if (self.args & isinstance(self.args[0], str)).all():
             name = self.args.pop(0)
             self.processed_args += 1
         # else get the name from the keywords
