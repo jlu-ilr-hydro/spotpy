@@ -75,7 +75,7 @@ Now you just have to save this file, e.g. `spotpy_setup_rosenbrock.py`.
 			
 ## Sampling
 
-Now that we crated our setup file, we want to start to investigate our function.
+Now that we created our setup file, we want to start to investigate our function.
 One way is to analyse the results of the sampling is to have a look at the objective function trace of the sampled parameters. 
 
 We start directly with all algorithms. First we have to create a new file:
